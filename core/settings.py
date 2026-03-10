@@ -20,6 +20,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Carrega as variáveis do arquivo .env
 load_dotenv(os.path.join(BASE_DIR, '.env'))
 
+# Chave OPENIA
+OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
@@ -42,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'engine', #app motor do produto
+    'chat' #app chat do produto
 ]
 
 MIDDLEWARE = [
@@ -59,7 +63,7 @@ ROOT_URLCONF = 'core.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -111,9 +115,11 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/6.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+# Altere de 'en-us' para 'pt-br'
+LANGUAGE_CODE = 'pt-br'
 
-TIME_ZONE = 'UTC'
+# Altere para o nosso fuso horário (ajuda muito nos logs e histórico)
+TIME_ZONE = 'America/Sao_Paulo'
 
 USE_I18N = True
 
@@ -124,3 +130,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
+
+# Configurações de Autenticação
+LOGIN_REDIRECT_URL = '/admin/'  # Por enquanto, manda para o admin. Depois trocamos para a home do chat.
+LOGOUT_REDIRECT_URL = 'login'

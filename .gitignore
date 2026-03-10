@@ -1,0 +1,17 @@
+# Ambientes Virtuais
+venv/
+env/
+.venv/
+
+# Variáveis de Ambiente e Segurança
+.env
+.env.local
+
+# Arquivos compilados do Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Arquivos de Sistema Operacional
+.DS_Store
+Thumbs.db

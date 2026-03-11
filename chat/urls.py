@@ -1,6 +1,6 @@
 from django.urls import path
+from . import views
 
-# Por enquanto, deixamos a lista vazia ou com uma rota de teste
 urlpatterns = [
-    # path('', views.home, name='chat_home'), 
+    path('api/send-message/', views.api_chat, name='api_chat'),
 ]

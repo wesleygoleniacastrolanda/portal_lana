@@ -3,3 +3,6 @@ python-dotenv
 openai 
 psycopg2-binary 
 pgvector
+sqlalchemy 
+pymysql
+cryptography

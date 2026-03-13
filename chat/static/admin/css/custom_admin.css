@@ -1,0 +1,83 @@
+:root {
+    --primary: #004b87;
+    --secondary: #003666;
+    --accent: #004b87;
+    --link-selected-fg: var(--link-fg);
+    --selected-row: transparent;
+    --header-bg: #004b87;
+    --header-color: #ffffff;
+    --breadcrumbs-bg: #eef4fc;
+    --breadcrumbs-fg: #1f3f62;
+    --breadcrumbs-link-fg: #004b87;
+}
+
+#header {
+    background: #004b87;
+    box-shadow: 0 3px 12px rgba(0, 44, 91, 0.2);
+}
+
+#site-name a,
+#site-name a:link,
+#site-name a:visited,
+#branding h1,
+#branding h1 a,
+.lana-admin-brand,
+.lana-admin-title {
+    color: #ffffff !important;
+}
+
+.lana-admin-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+}
+
+.lana-admin-logo {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid rgba(255, 255, 255, 0.55);
+}
+
+.lana-admin-title {
+    font-size: 0.88rem;
+    font-weight: 700;
+    letter-spacing: 0.1px;
+}
+
+.theme-toggle {
+    display: none !important;
+}
+
+.module h2,
+.module caption,
+.inline-group h2 {
+    background: #004b87 !important;
+    color: #004b87 !important;
+    font-weight: 700;
+}
+
+div.breadcrumbs {
+    background: #78808a !important;
+    padding: 10px 40px;
+    border: none;
+    color: var(--breadcrumbs-fg);
+    text-align: left;
+}
+
+#nav-sidebar .current-app .section:link, #nav-sidebar .current-app .section:visited {
+    color: #fff;
+    font-weight: bold;
+}
+
+#nav-sidebar .current-model {
+    background: #e5e5e5 !important;
+}
+
+.selector-chosen-title {
+    background: #014b87 !important;
+    color: var(--header-link-color);
+    padding: 8px;
+}

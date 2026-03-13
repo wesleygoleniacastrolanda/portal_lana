@@ -129,8 +129,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 
 # Configurações de Autenticação
-LOGIN_REDIRECT_URL = '/admin/'  # Por enquanto, manda para o admin. Depois trocamos para a home do chat.
+LOGIN_REDIRECT_URL = '/chat/'
 LOGOUT_REDIRECT_URL = 'login'
